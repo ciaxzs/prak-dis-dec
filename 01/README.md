@@ -101,3 +101,24 @@ Program installer mulai mengekstrak seluruh pustaka, binari utilitas Git, serta 
 16. Penyelesaian Instalasi
 <img src="images/16_finsh.jpeg" width="700">
 Setelah proses transfer data berakhir, jendela Completing the Git Setup Wizard muncul menandakan Git telah sukses terpasang pada komputer. Opsi centang View Release Notes dibiarkan aktif bila ingin membaca catatan perubahan versi, lalu tombol Finish ditekan untuk menutup jendela instalasi secara tuntas. 
+
+17. Uji Verifikasi Pemanggilan Git pada Command Prompt
+<img src="images/17_chck.i.jpeg" width="700">
+Setelah proses instalasi selesai, tahap pengujian dilakukan guna memastikan berkas binari Git telah terdaftar dengan benar di dalam *environment variable* sistem operasi Windows dan dapat diakses secara global. Jendela terminal Command Prompt (CMD) dibuka, kemudian dieksekusi instruksi:
+
+Analisis Output:
+
+Ketika perintah `git` dijalankan tanpa argumen tambahan, konsol langsung merespons dengan menampilkan daftar parameter penggunaan (*usage format*) beserta ringkasan perintah dasar (*common Git commands*). Perintah tersebut dikelompokkan ke dalam beberapa fungsi kerja utama, antara lain:
+
+* Start a working area* (`clone`, `init`) untuk membuat atau mengambil repositori.
+* Work on the current change* (`add`, `mv`, `restore`, `rm`) untuk mengatur berkas ke *staging area*.
+* Examine the history and state* (`status`, `diff`, `log`, `show`) untuk memantau kondisi dan riwayat berkas.
+* Grow, mark and tweak your common history* (`branch`, `commit`, `merge`, `rebase`, `switch`, `tag`) untuk manajemen cabang dan pencatatan komit.
+* *Collaborate* (`fetch`, `pull`, `push`) untuk sinkronisasi dengan server remote.
+
+Respons ini membuktikan bahwa konfigurasi penyesuaian PATH (*Git from the command line and also from 3rd-party software*) berhasil diimplementasikan, sehingga terminal mengenali perintah `git` tanpa memicu pesan galat *command not recognized*.
+
+18. Pemeriksaan Versi Git Terpasang (`git --version`)
+<img src="images/18_chck.g.jpeg" width="700">
+Untuk mengonfirmasi nomor rilis paket perangkat lunak Git yang aktif dan terpasang pada komputer lokal, dijalankan perintah spesifik berikut pada terminal CMD:
+Output ini memvalidasi bahwa sistem telah berhasil memasang **Git for Windows versi 2.56.0** (arsitektur 64-bit) sesuai dengan berkas installer yang diunduh sebelumnya. Dengan munculnya informasi versi tersebut, lingkungan pengembangan lokal dinyatakan siap digunakan untuk konfigurasi identitas global (`git config`) serta pengerjaan repositori tugas praktikum selanjutnya.
