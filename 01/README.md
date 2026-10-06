@@ -121,4 +121,24 @@ Respons ini membuktikan bahwa konfigurasi penyesuaian PATH (*Git from the comman
 18. Pemeriksaan Versi Git Terpasang (`git --version`)
 <img src="images/18_chck.g.jpeg" width="700">
 Untuk mengonfirmasi nomor rilis paket perangkat lunak Git yang aktif dan terpasang pada komputer lokal, dijalankan perintah spesifik berikut pada terminal CMD:
-Output ini memvalidasi bahwa sistem telah berhasil memasang **Git for Windows versi 2.56.0** (arsitektur 64-bit) sesuai dengan berkas installer yang diunduh sebelumnya. Dengan munculnya informasi versi tersebut, lingkungan pengembangan lokal dinyatakan siap digunakan untuk konfigurasi identitas global (`git config`) serta pengerjaan repositori tugas praktikum selanjutnya.
+Output ini memvalidasi bahwa sistem telah berhasil memasang **Git for Windows versi 2.56.0** (arsitektur 64-bit) sesuai dengan berkas installer yang diunduh sebelumnya. Dengan munculnya informasi versi tersebut, lingkungan pengembangan lokal dinyatakan siap digunakan untuk konfigurasi identitas global (`git config`) serta pengerjaan repositori tugas praktikum selanjutnya. 
+
+
+PRAKTIK 2 — KONFIGURASI GIT
+Setelah Git berhasil diinstal, langkah berikutnya adalah melakukan konfigurasi identitas pengguna. Git perlu mengetahui nama dan email pengguna karena informasi tersebut akan dicatat pada setiap commit.
+
+1. Mengatur Konfigurasi Nama Pengguna (Username)
+<img src="images/19_usn.jpeg" width="700">
+Perintah git config digunakan untuk mengatur konfigurasi Git pada sistem. Parameter global berarti konfigurasi tersebut berlaku secara global untuk seluruh repositori di komputer pengguna. Sedangkan user.name digunakan untuk menentukan nama pengguna (ciaxzs) yang akan dicatat dalam setiap commit. Konfigurasi nama biasanya cukup dilakukan satu kali, kecuali pengguna ingin mengubahnya.   
+
+2. Mengatur Konfigurasi Email
+<img src="images/20_email.jpeg" width="700">
+Email digunakan sebagai salah satu identitas pengguna Git dan akan dicatat pada setiap commit. Email yang digunakan (odillia77@gmail.com) merupakan email yang terhubung langsung dengan akun GitHub agar identitas commit dapat dikaitkan secara otomatis dengan akun GitHub pengguna.   
+
+3. Mengecek Konfigurasi Git
+<img src="images/21_hsl.jpeg" width="700">
+Perintah git config list digunakan untuk menampilkan seluruh konfigurasi Git yang aktif tersimpan pada komputer. Dari hasil eksekusi tersebut, pengguna dapat memeriksa dan memastikan bahwa:   
+Username sudah terdaftar dengan benar sebagai user.name=ciaxzs.   
+Email sudah terdaftar dengan benar sebagai user.email=odillia77@gmail.com.   
+Branch default sudah menggunakan init.defaultbranch=main.   
+Konfigurasi Git lainnya (seperti core.editor untuk Visual Studio Code, credential.helper=manager, serta pengaturan autocrlf) sudah tersimpan dengan tepat.  
